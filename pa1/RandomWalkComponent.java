@@ -18,7 +18,7 @@ public class RandomWalkComponent extends JComponent
         Graphics2D g2 = (Graphics2D) g;
 
         ImPoint startLoc = new ImPoint(200, 200);
-        int stepSize = 10;
+        int stepSize = 5;
         Drunkard drunkard = new Drunkard(startLoc, stepSize);
         
         ImPoint currentPoint = drunkard.getCurrentLoc();

@@ -17,14 +17,20 @@ public class DrunkardTester
     {
         ImPoint loc = new ImPoint(0, 0);
         int theStepSize = 10;
+        System.out.println("Drunkard is expected to start at " + loc);
+        System.out.println("The step size is expected to be " + theStepSize);
         drunkardTest(loc, theStepSize);
         
         loc = new ImPoint(100, 82);
         theStepSize = 20;
+        System.out.println("Drunkard is expected to start at " + loc);
+        System.out.println("The step size is expected to be " + theStepSize);
         drunkardTest(loc, theStepSize);
         
         loc = new ImPoint(50, 60);
         theStepSize = 30;
+        System.out.println("Drunkard is expected to start at " + loc);
+        System.out.println("The step size is expected to be " + theStepSize);
         drunkardTest(loc, theStepSize);
         /*
         int theStepSize = 10;
@@ -48,9 +54,14 @@ public class DrunkardTester
         System.out.println("The current Location is: " + formerStep);
         
         System.out.println("Testing takeStep...");
-        drunkard.takeStep();
-        ImPoint nextStep = drunkard.getCurrentLoc();
-        System.out.println("The drunkard moved from " + formerStep + " to " + nextStep + ".");
+        System.out.println("The Drunkard will take 5 steps.");
+        for (int i=0; i<5; i++)
+        {
+            drunkard.takeStep();
+            ImPoint nextStep = drunkard.getCurrentLoc();
+            System.out.println("Take valid step from " + formerStep + " to " + nextStep + ".");
+            formerStep = nextStep;
+        }
         System.out.println();
     }
 }
